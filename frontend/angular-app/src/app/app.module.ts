@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,11 +23,10 @@ import { AboutComponent } from './components/about/about.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule // Add this import for ngModel
   ],
-  providers: [
-    provideClientHydration()
-  ],
+  providers: [provideClientHydration()],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
