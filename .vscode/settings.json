@@ -8,6 +8,15 @@
             "name": "user_database",
             "database": "user_database",
             "username": "siyabonga"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "angulardb",
+            "database": "angulardb",
+            "username": "Siyabonga"
         }
     ]
 }

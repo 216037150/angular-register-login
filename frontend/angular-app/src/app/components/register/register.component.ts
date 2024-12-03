@@ -16,6 +16,10 @@ export class RegisterComponent {
 
   constructor(private http: HttpClient) {}
 
+  ngOnInit(){
+
+  }
+
   onRegister() {
     if (this.registerObj.password !== this.registerObj.confirmPassword) {
       alert('Passwords do not match!');
@@ -25,11 +29,11 @@ export class RegisterComponent {
     this.http.post('http://localhost:5000/register', this.registerObj).subscribe({
       next: (response) => {
         alert('Registration successful!');
-        console.log(response);
+        console.log('Server response:', response);
       },
       error: (err) => {
         alert('Registration failed. Please try again.');
-        console.error(err);
+        console.error('Error details:', err);
       },
     });
   }

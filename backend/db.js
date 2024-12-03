@@ -1,14 +1,14 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'siyabonga',
+  user: 'Siyabonga',
   host: 'localhost',
-  database: 'user_database',
+  database: 'angulardb',
   password: 'Siya@100',
   port: 5432,
 });
 
-//Test connection
+
 async function connectDb() {
   try {
     await pool.connect();
