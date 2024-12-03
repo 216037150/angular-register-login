@@ -12,8 +12,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'footer', component: FooterComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, 
-  { path: '**', redirectTo: '/home', pathMatch: 'full' } 
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, 
+  { path: '**', redirectTo: '/register', pathMatch: 'full' } 
 ];
 
 @NgModule({

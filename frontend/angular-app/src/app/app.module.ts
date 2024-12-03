@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,12 @@ import { AboutComponent } from './components/about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // Add this import for ngModel
+    FormsModule,
+    HttpClientModule
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
+

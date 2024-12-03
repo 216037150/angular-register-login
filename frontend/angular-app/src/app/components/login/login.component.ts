@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -12,15 +13,23 @@ export class LoginComponent {
     password: ''
   };
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   onLogin() {
-    if (this.loginObj.password === 'adm1n' && this.loginObj.email === 'admin@gmail.com') {
-      this.router.navigateByUrl('/home');
-    } else if(!this.loginObj.password || !this.loginObj.email){
-      alert("all field must be filled")
-    }else{
-      alert('Wrong credentials');
+    if (!this.loginObj.email || !this.loginObj.password) {
+      alert("All fields must be filled");
+      return;
     }
+
+    this.http.post('http://localhost:5000/login', this.loginObj).subscribe(
+      (response: any) => {
+        alert('Login successful!');
+        this.router.navigateByUrl('/home'); 
+      },
+      (error) => {
+        alert('Invalid email or password');
+        console.error(error);
+      }
+    );
   }
 }
