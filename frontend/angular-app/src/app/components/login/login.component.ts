@@ -21,16 +21,28 @@ export class LoginComponent {
       return;
     }
 
-    this.http.post('http://localhost:5000/login', this.loginObj).subscribe({
-      next: (response: any) => {
-        alert('Login successful!');
-        console.log('Server response:', response);
-        this.router.navigateByUrl('/home');
-      },
-      error: (err) => {
-        alert('Invalid email or password');
-        console.error('Error details:', err);
-      },
-    });
+    console.log(this.loginObj)
+
+    this.http.post('http://localhost:5000/login', this.loginObj).subscribe(response => {
+      console.log(response)
+      this.router.navigateByUrl('/home');
+    }, error => {
+      console.log(error)
+    })
+
+  //   this.http.post('http://localhost:5000/login', this.loginObj).subscribe({
+  //     next: (response: any) => {
+  //       alert('Login successful!');
+  //       console.log('Server response:', response);
+  //       this.router.navigateByUrl('/home');
+  //     },
+  //     error: (err) => {
+  //       alert('Invalid email or password');
+  //       console.error('Error details:', err);
+  //     },
+  //   });
   }
 }
+
+
+
