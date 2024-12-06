@@ -1,13 +1,14 @@
 const { Pool } = require('pg');
+const { config } = require('dotenv');
+config();
 
 const pool = new Pool({
-  user: 'siyabonga',
-  host: 'localhost',
-  database: 'angulardb',
-  password: 'Siya@100',
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
-
 
 async function connectDb() {
   try {
@@ -17,6 +18,7 @@ async function connectDb() {
     console.error("Failed to connect:", error.message);
   }
 }
+
 connectDb();
 
 module.exports = pool;

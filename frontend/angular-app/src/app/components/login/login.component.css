@@ -1,13 +1,95 @@
+/* Overall container styling */
+.login-form {
 
-
-form{
-  padding-top: 100px;
-  margin: 0 auto;
-  max-width: 500px;
-  min-width:300px;
-  width:60vw;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 50px auto;
+  margin-top: 120px;
 }
 
 
+form {
+  padding: 20px 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input.form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
 
 
+label.form-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+
+.form-check-input {
+  margin-right: 5px;
+  transform: scale(1.2);
+}
+
+
+button.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+
+.text-center {
+  text-align: center;
+  font-size: 14px;
+}
+
+.text-center a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
+}
+
+
+.row .col a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.row .col a:hover {
+  text-decoration: underline;
+}
+h2{
+  text-align: center;
+  text-decoration: bold;
+}

@@ -1,13 +1,16 @@
 <div class="login-form">
+  <h2>Login</h2>
   <form>
     <div class="form-outline mb-4" data-mdb-input-init>
+      <label class="form-label" for="form2Example1">Email</label>
       <input [(ngModel)]="loginObj.email" class="form-control" id="form2Example1" name="email" type="email" />
-      <label class="form-label" for="form2Example1">Email address</label>
+
     </div>
 
     <div class="form-outline mb-4" data-mdb-input-init>
-      <input [(ngModel)]="loginObj.password" class="form-control" id="form2Example2" name="password" type="password" />
       <label class="form-label" for="form2Example2">Password</label>
+      <input [(ngModel)]="loginObj.password" class="form-control" id="form2Example2" name="password" type="password" />
+
     </div>
 
     <div class="row mb-4">
